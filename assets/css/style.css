@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-grey);
+  color: var(--color-dark);
+  font-family: 'Asap', sans-serif;
+  font-optical-sizing: auto;
+  line-height: 1.5;
+}
+
+/*  ########### header css #########  */
+
+.header {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.site-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-info h1 {
+  text-transform: uppercase;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar li a:link,
+.navbar li a:visited {
+  text-transform: capitalize;
+  background-color: var(--color-primary);
+  color: var(--color-dark);
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar li a:hover,
+.navbar li a:focus,
+.navbar li a:active {
+  background-color: var(--color-dark);
+  color: var(--color-primary);
+}
+
+/* content-area css  */
+.content-area {
+  flex-direction: column;
+}
+.main-content-area {
+  padding: 10px;
+}
+
+/* posts css  */
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+.post {
+  background-color: var(--color-white);
+  margin-bottom: 20px;
+}
+.post img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.post figure {
+  display: flex;
+  flex-direction: column;
+}
+.post figure h2 {
+  background-color: var(--color-primary);
+  text-align: center;
+  padding: 20px;
+  color: var(--color-dark);
+  text-transform: capitalize;
+}
+
+.post p {
+  padding: 25px;
+  color: var(--color-dark);
+  line-height: 1.5;
+}
+
+/* // / for dev width > 768 */
+@media all and (min-width: 768px) {
+  .posts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .post {
+    width: 49%;
+  }
+}
+/* // / for dev width > 1180  */
+
+@media all and (min-width: 1180px) {
+  .navbar ul {
+    flex-direction: row;
+  }
+  .navbar ul li {
+    flex-grow: 1;
+  }
+
+  .content-area {
+    flex-direction: row;
+  }
+  .main-content-area {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  .sidebar-section {
+    flex: 0 0 400px;
+  }
+  .post {
+    width: 100%;
+  }
+  .one-half {
+    width: 49%;
+  }
+  .one-third {
+    width: 32%;
+  }
+}
