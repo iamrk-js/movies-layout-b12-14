@@ -130,6 +130,63 @@ body {
   margin-right: 10px;
   font-size: 22px;
 }
+
+/* download section  */
+.download-img {
+  height: 250px;
+}
+.download-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.download-content {
+  background-color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+}
+.download-link {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 22px;
+}
+.download-info {
+  background-color: var(--color-white);
+  padding: 20px;
+}
+
+.download-rating {
+  background-color: var(--color-primary);
+}
+
+.download-cast img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.download-genre {
+  margin-bottom: 10px;
+}
+
+.download-cast h4,
+.download-genre h4 {
+  flex: 0 0 50px;
+  align-self: center;
+}
+
+.download-rating {
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-weight: 700;
+}
+
 /* // / for dev width > 768 */
 @media all and (min-width: 768px) {
   .posts {
@@ -160,6 +217,20 @@ body {
     padding: 30px;
     align-self: center;
   }
+
+  .download-img {
+    height: auto;
+    background-color: var(--color-dark);
+  }
+  .download-content {
+    flex-direction: row;
+  }
+  .download-info {
+    flex-grow: 1;
+  }
+  .download-link, .download-rating{
+    flex : 0 0 150px
+  }
 }
 /* // / for dev width > 1180  */
 
@@ -189,5 +260,8 @@ body {
   }
   .one-third {
     width: 32%;
+  }
+  .download-link, .download-rating{
+    flex : 0 0 200px
   }
 }
