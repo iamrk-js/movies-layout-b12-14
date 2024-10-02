@@ -186,7 +186,57 @@ body {
   padding: 20px;
   font-weight: 700;
 }
+/* gallary section css  */
+.gallary-imgs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallary-img {
+  height: 350px;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+.gallary-img a {
+  display: block;
+  height: 100%;
+}
 
+.gallary-img a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* sidebar section css  */
+.wedget {
+  padding: 20px;
+}
+
+.wedget-card {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  padding: 20px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.wedget-card a {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+.wedget-card  h3{
+  margin-bottom: 10px;
+}
+.wedget-card ul {
+  margin-left: 10px;
+}
+.footer{
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+  padding: 20px;
+}
 /* // / for dev width > 768 */
 @media all and (min-width: 768px) {
   .posts {
@@ -228,8 +278,19 @@ body {
   .download-info {
     flex-grow: 1;
   }
-  .download-link, .download-rating{
-    flex : 0 0 150px
+  .download-link,
+  .download-rating {
+    flex: 0 0 150px;
+  }
+
+  .gallary-imgs{
+    margin-left: -10px;
+    justify-content: space-between;
+  }
+  .gallary-img{
+    margin-left: 10px;
+    flex-basis: 48%;
+    flex-grow: 0;
   }
 }
 /* // / for dev width > 1180  */
@@ -261,7 +322,50 @@ body {
   .one-third {
     width: 32%;
   }
-  .download-link, .download-rating{
-    flex : 0 0 200px
+  .download-link,
+  .download-rating {
+    flex: 0 0 200px;
   }
+
+  /* 1 5 9  */
+  /* 2 6 10   
+  
+  (4n + 2)
+  (4*0 + 2) = 2
+  (4*1+ 2) = 6
+  (4*2+ 2) = 10
+  
+  */ 
+
+
+  /* 
+  (4n + 3) 
+  (4*0 + 3)  >> 3
+  (4*1 + 3)  >> 7
+  (4*2 + 3)  >> 11
+  
+    (4n + 4)  
+    (4 * 0 + 4)   >> 4
+    (4 * 1 + 4)   >> 8
+    (4 * 2 + 4)   >> 12
+  */
+  .gallary-img{
+    flex-grow: 1
+  }
+  .gallary-img:nth-child(4n + 1){
+    flex-basis: 260px;
+  }
+
+  .gallary-img:nth-child(4n + 2){
+    flex-basis: 340px;
+  }
+
+  .gallary-img:nth-child(4n + 3){
+    flex-basis: 180px;
+  }
+
+  .gallary-img:nth-child(4n + 4){
+    flex-basis: 420px;
+  }
+
 }
